@@ -3,15 +3,17 @@
 
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="icon" href="/static/imgs/favicon.png" type="image/png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>InfoTech IFPB</title>
 </head>
 
 <body>
     <header>
+        <img id="logo" src="https://invenzi.com/wp-content/uploads/2025/05/ifpb-682ccb015bc93.webp" alt="Logo IFPB">
         <nav>
-            <a href="./index.html">Home</a>
+            <a href="./index.html">Início</a>
             <a href="./servicos.html">Serviços</a>
             <a href="./equipe.html">Equipe</a>
         </nav>
@@ -21,6 +23,35 @@
         <p>Preencha o formulário abaixo para solicitar suporte técnico e relatar o problema que você está enfrentando.
         </p>
 
+        <form action="" method="POST" class="chamado-form">
+            <div class="form-group">
+                <label for="nome">Seu Nome Completo:</label>
+                <input type="text" id="nome" name="nome" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Seu Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="telefone">Telefone/WhatsApp (opcional):</label>
+                <input type="tel" id="telefone" name="telefone">
+            </div>
+            <div class="form-group">
+                <label for="tipo_equipamento">Tipo de Equipamento:</label>
+                <select id="tipo_equipamento" name="tipo_equipamento" required>
+                    <option value="">Selecione o tipo...</option>
+                    <option value="notebook">Notebook</option>
+                    <option value="desktop">Desktop (Computador de Mesa)</option>
+                    <option value="monitor">Monitor/Tela</option>
+                    <option value="outro">Outro</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="descricao">Descrição Detalhada do Problema:</label>
+                <textarea id="descricao" name="descricao" rows="5" required></textarea>
+            </div>
+            <button type="submit">Enviar Chamado</button>
+        </form>
     </main>
     <footer>
         <p>© 2025 InfoTech IFPB. Todos os direitos reservados.</p>

@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="/static/css/style.css">
     <link rel="icon" href="/static/imgs/favicon.png" type="image/png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>InfoTech IFPB</title>
+    <title>InfoTech IFPB - Abrir Chamado</title>
 </head>
 
 <body>
@@ -15,6 +15,7 @@
         <nav>
             <a href="./index.html">Início</a>
             <a href="./servicos.html">Serviços</a>
+            <a href="./chamado.html">Chamado</a>
             <a href="./equipe.html">Equipe</a>
         </nav>
     </header>
@@ -23,33 +24,44 @@
         <p>Preencha o formulário abaixo para solicitar suporte técnico e relatar o problema que você está enfrentando.
         </p>
 
-        <form action="" method="POST" class="chamado-form">
+        <form action="#" method="POST" class="chamado-form">
             <div class="form-group">
                 <label for="nome">Seu Nome Completo:</label>
-                <input type="text" id="nome" name="nome" required>
+                <input type="text" id="nome" name="nome" required placeholder="Ex: Mr Fancy Pants">
             </div>
+
             <div class="form-group">
                 <label for="email">Seu Email:</label>
-                <input type="email" id="email" name="email" required>
+                <input type="email" id="email" name="email" required placeholder="Ex: mrfancypants@email.com">
             </div>
+
             <div class="form-group">
-                <label for="telefone">Telefone/WhatsApp (opcional):</label>
-                <input type="tel" id="telefone" name="telefone">
+                <label for="telefone">Telefone/WhatsApp:</label>
+                <input type="tel" id="telefone" name="telefone" required placeholder="Ex: (83) 99999-9999">
             </div>
+
             <div class="form-group">
-                <label for="tipo_equipamento">Tipo de Equipamento:</label>
+                <label for="tipo_equipamento">Tipo de Serviço/Equipamento:</label>
                 <select id="tipo_equipamento" name="tipo_equipamento" required>
                     <option value="">Selecione o tipo...</option>
-                    <option value="notebook">Notebook</option>
-                    <option value="desktop">Desktop (Computador de Mesa)</option>
-                    <option value="monitor">Monitor/Tela</option>
+                    <option value="hardware">Hardware (Reparo/Troca)</option>
+                    <option value="software">Software (Instalação/Vírus)</option>
+                    <option value="redes">Redes (Internet/Wi-Fi)</option>
                     <option value="outro">Outro</option>
                 </select>
             </div>
+
             <div class="form-group">
                 <label for="descricao">Descrição Detalhada do Problema:</label>
-                <textarea id="descricao" name="descricao" rows="5" required></textarea>
+                <textarea id="descricao" name="descricao" rows="5" required
+                    placeholder="Preciso de ajuda com X, pois estou com problema Y e Z. Já tentei N e não deu certo."></textarea>
             </div>
+
+            <div class="form-group checkbox-group">
+                <input type="checkbox" id="urgencia" name="urgencia">
+                <label for="urgencia">É urgente? (Prioridade alta)</label>
+            </div>
+
             <button type="submit">Enviar Chamado</button>
         </form>
     </main>

@@ -79,7 +79,7 @@ Este é um projeto estático, não requerendo instalação de dependências comp
 ## 6. Documentação
 
 O manual de uso detalhado, incluindo regras de negócio e fluxo de navegação, pode ser encontrado no arquivo:
-[`manual-uso.pdf`](./manual-uso.pdf)
+[`manual-uso.pdf`](./static/manual-uso.pdf)
 
 ---
 
